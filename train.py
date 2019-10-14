@@ -1,4 +1,5 @@
 import matplotlib
+matplotlib.use('pdf')
 import numpy as np
 import glob
 import os
