@@ -10,6 +10,11 @@ from utils import now
 from travelgan import TravelGAN
 from loader import Loader
 
+import sys
+
+fout = open("log.txt")
+sys.stdout = fout
+
 def get_data_args(args):
     batch1, batch2, args.channels, args.imdim = get_data_imagenet(args.datadirb1, args.datadirb2, D=int(1.25 * args.downsampledim))
     return args, batch1, batch2
